@@ -1,4 +1,4 @@
-class Person:
+class User:
     def __init__(self,name,phone,city,email):
 
         self.name = name
@@ -12,7 +12,7 @@ class Person:
 
 
 
-class Customer(Person):
+class Customer(User):
 
     
     def __init__(self,name,phone,city,email,wallet_balance):
