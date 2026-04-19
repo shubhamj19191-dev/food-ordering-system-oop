@@ -1,4 +1,6 @@
 from customer import Customer 
+from customer import PremiumCustomer
+
 
 
 
@@ -11,10 +13,21 @@ per1 = Customer(
     1000,
    
 )
+# per1.order_place("pizza",500)
+# per1.get_bill(500)
+# per1.rate_restaurant(3)
 
-per1.get_info()
 
-per1.add_money(50)
-per1.order_place("pizza",500)
-per1.get_bill(500)
-per1.rate_restaurant(3)
+
+
+per2 = PremiumCustomer(
+    "rahul",
+    "456", 
+    "surat", 
+    "mail2",
+     1000
+)
+per2.order_place("Burger",250)
+per2.get_bill(250)
+per2.rate_restaurant(5)
+

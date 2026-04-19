@@ -5,7 +5,6 @@ class Customer(User):
 
     
     def __init__(self,name,phone,city,email,wallet_balance):
-
      super().__init__(name,phone,city,email)
 
      self.wallet_balance = wallet_balance
@@ -35,5 +34,18 @@ class Customer(User):
         return  amount + del_charge  
 
     def rate_restaurant(self,rate):
-       print("You rated:",rate,"⭐")        
+       print("You rated:",rate,"star")        
 
+
+class PremiumCustomer(Customer):
+   
+            def get_bill(self,amount,del_charge =0):
+
+                 dis = amount * 10/100
+
+                 discount= amount - dis 
+
+                 print(f"Total Bill is after 10% discount : {discount} | Delivery charge is : {del_charge}")
+                 return discount + del_charge
+
+              
